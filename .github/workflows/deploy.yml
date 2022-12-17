@@ -31,7 +31,7 @@ jobs:
       - name: Terraform plan
         id: plan
         run: |-
-          terraform plan \
+          terraform plan -destroy \
           -var="region=us-east-1" \
           -var="public_key=$AWS_SSH_PUBLIC_KEY" \
           -var="private_key=$AWS_SSH_PRIVATE_KEY" \
